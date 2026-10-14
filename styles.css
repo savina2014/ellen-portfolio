@@ -99,7 +99,7 @@ button{font:inherit}
 
 /* ABOUT */
 .about-wrap{position:relative;overflow:hidden}
-.about-grid{display:grid;grid-template-columns:42% 58%;gap:46px;align-items:center;padding:18px 7% 0}
+.about-grid{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,58fr);gap:46px;align-items:center;padding:18px 7% 0}
 .about-photo{border:0;box-shadow:none;border-radius:0;background:none;padding:0}
 .about-photo img{display:block;width:100%;height:auto;border:0;box-shadow:none;border-radius:0;filter:none}
 .about-copy{font-size:20px;line-height:1.72;max-width:600px}
