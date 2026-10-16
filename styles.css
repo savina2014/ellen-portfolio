@@ -518,7 +518,7 @@ body.home .footer{margin-top:10px;padding:12px 0 18px}
 .hero-facts a:hover b{color:var(--rose)}
 @media (min-width:901px){
   body.home .hero-copy{position:relative}
-  body.home .hero-facts{position:absolute;left:clamp(60px,9vw,130px);top:calc(100% + 18px);margin:0;width:clamp(190px,16vw,260px)}
+  body.home .hero-facts{position:absolute;left:clamp(60px,9vw,130px);top:calc(100% + 18px);margin:0;width:clamp(190px,14vw,215px)}
 }
 @media (max-width:900px){
   .hero-facts{margin:16px auto 0;max-width:340px;text-align:left}
@@ -552,3 +552,45 @@ body.home .footer{margin-top:10px;padding:12px 0 18px}
 /* HOME: make the two achievements stand out a little more */
 .hero-facts b{font-size:18px;color:var(--rose)}
 .hero-facts a:hover b{color:var(--ink)}
+
+/* Floral decorations removed (all pages, both sides) */
+.floral,.home-floral,.floral.left,.floral.right{display:none!important}
+
+/* PERFORM: featured performance emphasis (Chopin featured, Beethoven second) */
+.performance-card .feat-label{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--rose);margin:0 0 10px}
+.performance-card .piece-sub{font-size:15px;line-height:1.4;color:var(--muted);margin:4px 0 0}
+.performance-card .watch{display:inline-block;margin-top:14px;font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--rose);text-decoration:none;border-bottom:1px solid var(--rose2);padding-bottom:2px}
+.performance-card .watch:hover{color:var(--rose2)}
+.performance-card.is-featured,.performance-card.is-second{grid-column:1/-1}
+.performance-card.is-featured .piece,.performance-card.is-second .piece{min-height:0}
+@media (min-width:701px){
+  .performance-card.is-featured{grid-template-columns:clamp(260px,36%,400px) minmax(0,1fr);gap:40px;align-items:center}
+  .performance-card.is-featured .perf-text{padding-top:0}
+  .performance-card.is-featured h3{font-size:28px}
+  .performance-card.is-featured .piece{font-size:26px}
+  .performance-card.is-second{grid-template-columns:clamp(210px,26%,300px) minmax(0,1fr);gap:32px;align-items:center}
+  .performance-card.is-second .perf-text{padding-top:0}
+  .performance-card.is-second .piece{font-size:21px}
+}
+@media (max-width:700px){
+  .performance-card.is-featured h3{font-size:24px}
+  .performance-card.is-featured .piece{font-size:22px}
+}
+
+/* HOME: achievement tiles replace the small hero lines; section icons stay on mobile only */
+.home-achv{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:18px 0 4px;width:calc(100% - 28px);margin-inline:auto;text-align:center}
+.home-achv a{display:block;position:relative;padding:4px 6px;text-decoration:none;color:var(--ink)}
+.home-achv a:not(:last-child):after{content:"";position:absolute;right:-5px;top:8px;bottom:8px;width:1px;background:#dcc7c1}
+.home-achv b{display:block;font-size:15px;letter-spacing:.01em;color:var(--rose)}
+.home-achv span,.home-achv i{display:block;font-size:12px;line-height:1.35;color:var(--muted);margin-top:3px}
+.home-achv i{font-style:italic;margin-top:1px}
+.home-achv a:hover b{color:var(--ink)}
+@media (min-width:901px){
+  body.home .home-paths{display:none}
+  body.home .home-achv{position:relative;z-index:3;margin-top:-30px;padding:6px 0 0;width:min(900px,calc(100% - 46px));gap:26px}
+  .home-achv a:not(:last-child):after{right:-13px;top:6px;bottom:6px}
+  .home-achv b{font-size:22px}
+  .home-achv span,.home-achv i{font-size:15px;margin-top:4px}
+  .home-achv i{margin-top:2px}
+}
+body.home .home-paths{display:none!important}
