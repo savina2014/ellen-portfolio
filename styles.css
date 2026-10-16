@@ -595,3 +595,5 @@ body.home .home-paths{display:none!important}
 .performance-card .meta{font-size:15px;color:var(--ink);opacity:.75;margin-top:6px}
 @media (max-width:900px){.performance-grid{gap:16px}.performance-card h3{font-size:17px}.performance-card .piece{font-size:15px}.performance-card .meta{font-size:13px}}
 @media (max-width:600px){.performance-grid{grid-template-columns:1fr;gap:30px}.performance-card{max-width:440px;margin-inline:auto}.performance-card h3{font-size:21px}.performance-card .piece{font-size:18px}.performance-card .meta{font-size:14px}}
+/* RESUME button removed: keep the mobile menu button at the right edge */
+@media (max-width:900px){.nav .mobile-toggle{grid-column:3;justify-self:end}}
