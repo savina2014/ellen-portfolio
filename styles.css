@@ -556,28 +556,16 @@ body.home .footer{margin-top:10px;padding:12px 0 18px}
 /* Floral decorations removed (all pages, both sides) */
 .floral,.home-floral,.floral.left,.floral.right{display:none!important}
 
-/* PERFORM: featured performance emphasis (Chopin featured, Beethoven second) */
-.performance-card .feat-label{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--rose);margin:0 0 10px}
-.performance-card .piece-sub{font-size:15px;line-height:1.4;color:var(--muted);margin:4px 0 0}
-.performance-card .watch{display:inline-block;margin-top:14px;font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--rose);text-decoration:none;border-bottom:1px solid var(--rose2);padding-bottom:2px}
-.performance-card .watch:hover{color:var(--rose2)}
-.performance-card.is-featured,.performance-card.is-second{grid-column:1/-1}
-.performance-card.is-featured .piece,.performance-card.is-second .piece{min-height:0}
-@media (min-width:701px){
-  .performance-card.is-featured{grid-template-columns:clamp(260px,36%,400px) minmax(0,1fr);gap:40px;align-items:center}
-  .performance-card.is-featured .perf-text{padding-top:0}
-  .performance-card.is-featured h3{font-size:28px}
-  .performance-card.is-featured .piece{font-size:26px}
-  .performance-card.is-second{grid-template-columns:clamp(210px,26%,300px) minmax(0,1fr);gap:32px;align-items:center}
-  .performance-card.is-second .perf-text{padding-top:0}
-  .performance-card.is-second .piece{font-size:21px}
-}
-@media (max-width:700px){
-  .performance-card.is-featured h3{font-size:24px}
-  .performance-card.is-featured .piece{font-size:22px}
-}
+/* RESUME page: opens instantly in the browser (pages as images) + PDF download */
+.resume-wrap{padding:28px 0 40px;max-width:860px}
+.resume-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}
+.resume-bar .page-title{margin:0;font-size:44px}
+.resume-dl{display:inline-block;padding:10px 20px;border-radius:9px;background:var(--rose);color:#fff;font-size:14px;font-weight:700;letter-spacing:.06em;text-decoration:none}
+.resume-dl:hover{background:var(--rose2)}
+.resume-img{display:block;width:100%;height:auto;border:1px solid var(--line);margin:0 0 18px;background:#fff}
+@media (max-width:600px){.resume-bar .page-title{font-size:32px}}
 
-/* HOME: achievement tiles replace the small hero lines; section icons stay on mobile only */
+/* HOME: achievement tiles replace the small hero lines; icon row removed */
 .home-achv{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:18px 0 4px;width:calc(100% - 28px);margin-inline:auto;text-align:center}
 .home-achv a{display:block;position:relative;padding:4px 6px;text-decoration:none;color:var(--ink)}
 .home-achv a:not(:last-child):after{content:"";position:absolute;right:-5px;top:8px;bottom:8px;width:1px;background:#dcc7c1}
@@ -586,7 +574,6 @@ body.home .footer{margin-top:10px;padding:12px 0 18px}
 .home-achv i{font-style:italic;margin-top:1px}
 .home-achv a:hover b{color:var(--ink)}
 @media (min-width:901px){
-  body.home .home-paths{display:none}
   body.home .home-achv{position:relative;z-index:3;margin-top:-30px;padding:6px 0 0;width:min(900px,calc(100% - 46px));gap:26px}
   .home-achv a:not(:last-child):after{right:-13px;top:6px;bottom:6px}
   .home-achv b{font-size:22px}
