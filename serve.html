@@ -2,12 +2,50 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Serve | Ellen Hwang</title>
 <meta name="description" content="Ellen Hwang portfolio — piano, service, leadership and honors.">
-<link rel="stylesheet" href="styles.css"></head><body class="serve-page"><header class="site-header"><div class="container nav">
+<link rel="stylesheet" href="styles.css">
+<!-- Floral placement for PERFORM / SERVE / LEAD / HONORS ONLY.
+     This page-local override never changes HOME, ABOUT, or shared styles.css. -->
+<style>
+@media (min-width: 901px) {
+  main.decor-page.flower-pair-only > img.floral {
+    display: block;
+    --floral-size: clamp(130px, 12.5vw, 185px);
+    width: var(--floral-size);
+    max-width: none;
+    height: min(470px, calc(100% - 140px));
+    opacity: .22;
+    object-fit: cover;
+    object-position: center top;
+    -webkit-mask-image: linear-gradient(#000 75%, transparent);
+    mask-image: linear-gradient(#000 75%, transparent);
+    pointer-events: none;
+    z-index: 0;
+  }
+  main.decor-page.flower-pair-only > img.floral.left {
+    left: calc(var(--side) - var(--floral-size) + 24px);
+    right: auto;
+    top: 205px;
+    bottom: auto;
+    transform: none;
+  }
+  main.decor-page.flower-pair-only > img.floral.right {
+    right: calc(var(--side) - var(--floral-size) + 24px);
+    left: auto;
+    top: 70px;
+    bottom: auto;
+    transform: scaleX(-1);
+  }
+}
+@media (max-width: 900px) {
+  main.decor-page.flower-pair-only > img.floral { display: none; }
+}
+</style>
+</head><body class="serve-page"><header class="site-header"><div class="container nav">
       <a class="brand" href="index.html">Ellen Hwang</a>
       <button class="mobile-toggle" aria-label="Open menu">☰</button>
       <nav class="nav-links"><a class="" href="index.html">HOME</a><a class="" href="perform.html">PERFORM</a><a class="active" href="serve.html">SERVE</a><a class="" href="lead.html">LEAD</a><a class="" href="honors.html">HONORS</a><a class="" href="about.html">ABOUT</a></nav>
       <a class="resume-btn" href="Ellen_Hwang_Resume.pdf" target="_blank" rel="noopener">RESUME</a>
-    </div></header><main class="decor-page"><img class="floral right" src="assets/images/floral.png" alt="" aria-hidden="true"><div class="container">
+    </div></header><main class="decor-page flower-pair-only"><img class="floral left" src="assets/images/floral.png" alt="" aria-hidden="true"><img class="floral right" src="assets/images/floral.png" alt="" aria-hidden="true"><div class="container">
 <section class="page-top"><div><h1 class="page-title">SERVE</h1><div class="page-key">C O N N E C T I O N</div></div>
 <p class="page-intro">At Music Angels Hands, a nonprofit organization, I help plan community programs, organize free concerts, and promote fundraisers such as our annual flea market. Piano has become one way I can serve—sharing music with people in the community while helping our group raise more than $11,000 for CHOC, Ronald McDonald House, and UCI.</p></section>
 <section class="serve-grid">
