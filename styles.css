@@ -586,5 +586,12 @@ body.home .home-paths{display:none!important}
 .home-achv a:hover b,.home-achv a:focus-visible b{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
 .home-achv a:hover span,.home-achv a:focus-visible span{color:var(--rose)}
 
-/* PERFORM: 3 videos — center the last card under the 2-column grid */
-@media (min-width:601px){.performance-grid .performance-card:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 16px)}}
+/* PERFORM: 3 videos in one row, album large with the text underneath */
+.performance-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.performance-card{display:block;max-width:none;width:auto;margin-inline:0}
+.performance-card .perf-text{padding-top:0;text-align:center}
+.performance-card h3{margin:16px 0 4px;font-size:21px;font-weight:700;color:var(--ink)}
+.performance-card .piece{font-size:19px;font-weight:600;min-height:0;color:var(--ink)}
+.performance-card .meta{font-size:15px;color:var(--ink);opacity:.75;margin-top:6px}
+@media (max-width:900px){.performance-grid{gap:16px}.performance-card h3{font-size:17px}.performance-card .piece{font-size:15px}.performance-card .meta{font-size:13px}}
+@media (max-width:600px){.performance-grid{grid-template-columns:1fr;gap:30px}.performance-card{max-width:440px;margin-inline:auto}.performance-card h3{font-size:21px}.performance-card .piece{font-size:18px}.performance-card .meta{font-size:14px}}
