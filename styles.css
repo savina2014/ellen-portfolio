@@ -509,3 +509,46 @@ body.home .footer{margin-top:10px;padding:12px 0 18px}
     height:min(calc(var(--fw)*3),calc(100% - var(--top) - 30px));
     -webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
 }
+
+/* HOME: piano achievements (text only, links to PERFORM / HONORS) */
+.hero-facts{margin:22px 0 0;display:grid;gap:12px;max-width:300px}
+.hero-facts a{display:block;border-left:2px solid var(--rose2);padding:1px 0 1px 12px}
+.hero-facts b{display:block;font-size:16px;letter-spacing:.02em;color:var(--ink)}
+.hero-facts span{display:block;font-style:italic;font-size:14px;line-height:1.35;color:var(--muted);margin-top:2px}
+.hero-facts a:hover b{color:var(--rose)}
+@media (min-width:901px){
+  body.home .hero-copy{position:relative}
+  body.home .hero-facts{position:absolute;left:clamp(60px,9vw,130px);top:calc(100% + 18px);margin:0;width:clamp(190px,16vw,260px)}
+}
+@media (max-width:900px){
+  .hero-facts{margin:16px auto 0;max-width:340px;text-align:left}
+}
+@media (min-width:901px) and (max-width:1199px){
+  body.home .hero-facts span{display:none}
+  body.home .hero-facts{gap:8px}
+}
+
+/* HONORS: Carnegie Hall photo record (additive) */
+.carnegie{position:relative;z-index:1;padding:34px 0 8px;text-align:center}
+.carnegie-title{margin:0 0 18px;font-size:16px;font-weight:700;letter-spacing:.22em;color:var(--rose)}
+.carnegie-note{margin:10px auto 18px;max-width:640px;font-size:15px;line-height:1.5;color:var(--muted)}
+.carnegie-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.carnegie-grid a{display:block;overflow:hidden;border:1px solid var(--line);border-radius:9px;background:var(--panel)}
+.carnegie-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%;display:block}
+@media (max-width:700px){.carnegie-grid{grid-template-columns:1fr 1fr;gap:10px}.carnegie-title{letter-spacing:.14em;font-size:14px}}
+
+/* PERFORM: Selected Repertoire (additive) */
+.repertoire{position:relative;z-index:1;padding:46px 0 8px}
+.rep-title{margin:0 0 20px;text-align:center;font-size:16px;font-weight:700;letter-spacing:.22em;color:var(--rose)}
+.rep-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.rep-group{border:1px solid var(--line);border-radius:9px;padding:20px 24px 18px;background:rgba(254,250,246,.78)}
+.rep-group h3{margin:0 0 10px;font-size:19px;color:var(--ink)}
+.rep-group ul{list-style:none;margin:0;padding:0}
+.rep-group li{font-size:15px;line-height:1.45;color:var(--muted);padding:0 0 9px 12px;border-left:2px solid var(--rose2);margin:0 0 9px}
+.rep-group li:last-child{margin-bottom:0;padding-bottom:0}
+.rep-group li b{color:var(--ink)}
+@media (max-width:900px){.rep-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.rep-grid{grid-template-columns:1fr}}
+/* HOME: make the two achievements stand out a little more */
+.hero-facts b{font-size:18px;color:var(--rose)}
+.hero-facts a:hover b{color:var(--ink)}
