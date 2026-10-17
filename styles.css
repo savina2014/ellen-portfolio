@@ -597,3 +597,9 @@ body.home .home-paths{display:none!important}
 @media (max-width:600px){.performance-grid{grid-template-columns:1fr;gap:30px}.performance-card{max-width:440px;margin-inline:auto}.performance-card h3{font-size:21px}.performance-card .piece{font-size:18px}.performance-card .meta{font-size:14px}}
 /* RESUME button removed: keep the mobile menu button at the right edge */
 @media (max-width:900px){.nav .mobile-toggle{grid-column:3;justify-self:end}}
+
+/* Desktop: menu links aligned to the right edge (RESUME button removed) */
+@media (min-width:901px){
+  .site-header .nav{grid-template-columns:1fr auto}
+  .site-header .nav .nav-links{grid-column:2;justify-content:flex-end;margin-right:0}
+}
