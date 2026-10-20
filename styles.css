@@ -603,3 +603,19 @@ body.home .home-paths{display:none!important}
   .site-header .nav{grid-template-columns:1fr auto}
   .site-header .nav .nav-links{grid-column:2;justify-content:flex-end;margin-right:0}
 }
+
+/* PERFORM: single video, centered */
+@media (min-width:601px){.performance-grid{grid-template-columns:minmax(0,420px);justify-content:center}}
+
+/* PERFORM: video on the left, Selected Repertoire beside it, Performances below */
+@media (min-width:901px){
+  .perform-top{display:grid;grid-template-columns:minmax(300px,380px) minmax(0,1fr);gap:44px;align-items:start;padding-top:20px}
+  .perform-top .performance-grid{grid-template-columns:1fr;justify-content:stretch;padding:0}
+  .perform-top .repertoire{padding:0}
+  .perform-top .rep-title{text-align:left;margin:0 0 16px}
+  .perform-top .rep-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .perform-top .rep-group{padding:16px 20px 14px}
+  .perform-top .rep-group h3{font-size:18px}
+  .perform-top .rep-group li{font-size:14.5px}
+}
+@media (max-width:900px){.perform-top .repertoire{padding-top:36px}}
